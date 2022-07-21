@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "orders",
+  "info": {
+    "singularName": "order",
+    "pluralName": "orders",
+    "displayName": "order"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "order_id": {
+      "type": "integer"
+    },
+    "order_name": {
+      "type": "string"
+    },
+    "products": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::product.product",
+      "mappedBy": "order_id"
+    },
+    "user_id": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::user-detail.user-detail",
+      "inversedBy": "orders_id"
+    }
+  }
+}

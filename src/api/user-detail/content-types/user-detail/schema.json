@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "user_details",
+  "info": {
+    "singularName": "user-detail",
+    "pluralName": "user-details",
+    "displayName": "User_Details"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "password": {
+      "type": "password"
+    },
+    "orders_id": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::order.order",
+      "mappedBy": "user_id"
+    }
+  }
+}
