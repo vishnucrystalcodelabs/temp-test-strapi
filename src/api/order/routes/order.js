@@ -14,6 +14,11 @@ module.exports = {
         method: "GET",
         path: "/order",
         handler: "order.find",
+      },
+      {
+        method: "GET",
+        path: "/order-product-list",
+        handler: "order.findOrder",
       }
     ]
   }
