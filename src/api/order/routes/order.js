@@ -12,7 +12,7 @@ module.exports = {
     routes: [
       {
         method: "GET",
-        path: "/orde’",
+        path: "/order",
         handler: "order.find",
       }
     ]
